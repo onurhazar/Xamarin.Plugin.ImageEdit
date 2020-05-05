@@ -1,17 +1,13 @@
 ﻿using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Navigation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Plugin.Media.Abstractions;
 using System.IO;
 using Xamarin.Forms;
 
 namespace Sample.ViewModels
 {
-	public class MainPageViewModel : BindableBase, INavigationAware
+    public class MainPageViewModel : BindableBase, INavigationAware
 	{
 		private ImageSource _Image;
 		public ImageSource Image {
@@ -79,6 +75,14 @@ namespace Sample.ViewModels
 		public void OnNavigatingTo(NavigationParameters parameters)
 		{
 		}
-	}
+
+        public void OnNavigatedFrom(INavigationParameters parameters)
+        {
+        }
+
+        public void OnNavigatedTo(INavigationParameters parameters)
+        {
+        }
+    }
 }
 
